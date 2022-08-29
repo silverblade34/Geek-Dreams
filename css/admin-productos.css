@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryFont:'Russo One', sans-serif;
+    --secondaryFont:'Slackey', cursive;
+    --tercierioFont:'Rancho', cursive;
+    --cuartaFuente:'Sulphur Point', sans-serif;
+    --colorText:#ffff;
+    --primaryColor:#835ad4a8;
+    --colorLogo:#330065;
+    --colorFondo:#08002a;
+    --tonoRojizo:#ad3a47;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*-----------------------BARRA DE DESPLAZAMIENTO--------------------- */
+body::-webkit-scrollbar {
+    width: 14px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #08002a;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #312370;
+        /* color of the scroll thumb */
+        /*border-radius: 20px;*/
+        /* roundness of the scroll thumb */
+}
+
+/*--------------------BARRA DE NAVEGACION------------------------*/
+
+
+/*--------------------SECTION PRODUCTOS------------------------*/
+
+.insertar-productos{
+    padding: 80px 100px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.insertar-productos .form{
+    padding-left: 50px;
+}
+.insertar-productos form{
+    width: 100%;
+    background-color: #08002a;
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: var(--colorText);
+}
+form h3{
+    font-family: var(--secondaryFont);
+    font-size: 20px;
+    text-align: center;
+}
+form div p{
+    font-family: var(--cuartaFuente);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+form div{
+    padding-bottom: 5px;
+}
+.insertar-productos form input{
+    font-family: var(--cuartaFuente);
+    font-size: 17px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 20px;
+    border: none;
+}
+form input[type=file]{
+    padding-left: 0;
+    height: 40px;
+    font-family: var(--cuartaFuente);
+    font-size: 15px;
+    border: none;
+}
+form input[type=submit]{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--tonoRojizo);
+    font-family: var(--primaryFont);
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--colorText);
+}
+form input[type=submit]:hover{
+    transition: all 1s;
+    background-color: var(--colorLogo);
+}
+form .form-categoria{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5px;
+}
+.form-categoria div select{
+    width: 100%;
+}
+form select{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-family: var(--cuartaFuente);
+    font-size: 15px;
+}
+.insertar-productos form textarea{
+    padding: 10px 20px;
+    font-family: var(--cuartaFuente);
+    font-size: 13px;
+    width: 100%;
+    height: 150px;
+}
+.insertar-productos .img{
+    display: flex;
+    align-items: center;
+}
+.insertar-productos img{
+    width: 100%;
+}

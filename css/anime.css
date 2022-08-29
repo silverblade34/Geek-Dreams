@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryFont:'Russo One', sans-serif;
+    --secondaryFont:'Slackey', cursive;
+    --tercierioFont:'Rancho', cursive;
+    --cuartaFuente:'Sulphur Point', sans-serif;
+    --colorText:#ffff;
+    --primaryColor:#835ad4a8;
+    --colorLogo:#330065;
+    --colorFondo:#08002a;
+    --tonoRojizo:#ad3a47;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*-----------------------BARRA DE DESPLAZAMIENTO--------------------- */
+body::-webkit-scrollbar {
+    width: 14px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #08002a;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #312370;
+        /* color of the scroll thumb */
+        /*border-radius: 20px;*/
+        /* roundness of the scroll thumb */
+}
+/*----------------------------BARRA DE NAVEGACION -------------------------*/
+header{
+    background-image: url('../img/anime/landing-anime3.png');
+    background-size: cover;
+    color: #ffff;
+}
+nav{
+    padding: 10px 100px;
+}
+header .logo img{
+    margin: auto 0;
+    width: 200px;
+}
+section h1{
+    text-align: center;
+    color: var(--colorFondo);
+    font-family: var(--secondaryFont);
+}
+section p{
+    font-size: 18px;
+    color: var(--colorText);
+    font-family: var(--cuartaFuente);
+}
+header nav{
+    display: flex
+}
+nav .lista-nav{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+.lista-nav ul li a{
+    color: #ffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;
+}
+.lista-nav ul li a:hover{
+    background-color: #ad3a47b6;
+    border-radius: 5px;
+    transition: all 0.8s;
+}
+.item-active{
+    padding: 10px 20px;
+    background-color: #ad3a47b6;
+    border-radius: 5px;
+}
+nav .icon-menu{
+    display: none;
+}
+/*---------------------LANDING--------------------------- */
+header section{
+    display: flex;
+    justify-content: center;
+    padding: 70px 100px;
+}
+.container-landing{
+    padding: 80px 80px;
+    text-align: center;
+}
+.container-landing h1{
+    color: var(--colorLogo);
+    font-family: var(--primaryFont);
+    font-size: 45px;
+}
+.container-landing h3{
+    font-family: var(--secondaryFont);
+    color: var(--colorLogo);
+}
+.container-landing p{
+    padding-top: 20px;
+    font-family: var(--cuartaFuente);
+    font-size: 17px;
+}
+.container-landing button{
+    margin-top: 20px;
+    border: 1px solid var(--tonoRojizo);
+    padding: 10px 15px;
+    background-color: #ad3a47a1;
+    border-radius: 5px;
+}.container-landing button:hover{
+    background-color: var(--tonoRojizo);
+    transition: all 0.8s;
+}
+.container-landing button a{
+    font-size: 18px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: var(--colorText);
+    font-family: var(--primaryFont);
+}
+.flecha-fixed img{
+   width: 50px;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+}
+main{
+    background-image: url('../img/fondo.webp');
+    padding: 50px 100px;
+    overflow: hidden;
+}
+/*------------------BARRA BUSCAR--------------------- */
+
+.barra-buscar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.barra-buscar form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conteiner-buscar{
+    display: flex;
+}
+.conteiner-buscar ul{
+    list-style: none;
+    height: 100%;
+    font-family: var(--primaryFont);
+    color: var(--colorText);
+}
+.conteiner-buscar .btn-categorias{
+    height: 50px;
+}
+.conteiner-buscar .btn-categorias div{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: var(--tonoRojizo);
+    height: 50px;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+}
+.btn-categorias i{
+    padding-left: 5px;
+}
+.conteiner-buscar .btn-categorias{
+    display: block;
+}
+.btn-categorias .lista-categorias{
+    height: max-content;
+    font-size: 14px;
+    background-color: #ad3a4783;
+    display: none;
+}
+.lista-categorias.active{
+   display: block;
+}
+.lista-categorias .items-categorias{
+    padding: 10px 0;
+    text-align: center;
+}
+.items-categorias:hover{
+    background-color: #312370;
+}
+.conteiner-buscar input{
+    height: 50px;
+    border: none;
+}
+.input-text{
+    min-width: 700px;
+    padding: 0 20px;
+    font-family: var(--cuartaFuente);
+    font-size: 18px;
+}
+.input-submit{
+    width: 100px;
+    font-size: 14px;
+    border-radius: 0 3px 3px 0;
+    background-color: var(--tonoRojizo);
+    font-family: var(--primaryFont);
+    color: var(--colorText);
+}
+/*----------------------------------PRODUCTOS-------------------------------------*/
+.productos{
+    padding-top: 80px;
+}
+.productos h1{
+    color: var(--colorText);
+}
+
+.container-productos{
+    display: grid;
+    padding: 80px 0;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.card{
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.527);
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 15px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #160b44;
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #160b44;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.527);
+  }
+  .card-image{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid var(--colorLogo);
+  }
+  .name{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    font-family: var(--primaryFont);
+  }
+  .description{
+    padding-top: 5px;
+    font-size: 16px;
+    color: #353535;
+    font-family: var(--primaryFont);
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    font-family: var(--primaryFont);
+    background-color: var(--colorLogo);
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button:hover{
+    background: var(--colorFondo);
+  }
+  
+/* ----------------------------------RESPONSIVE---------------------------------*/
+
+@media(max-width:850px){
+    header{
+        width: 100%;
+        overflow: hidden;
+    }
+   main{
+    width: 100%;
+     padding: 30px 30px;
+   }
+   /*----------------------------BARRA DE NAVEGACION -------------------------*/
+   header .logo img{
+    margin: auto 0;
+    width: 150px;
+  }
+  header section{
+    padding: 30px 30px;
+  }
+  header nav{
+    display: block;
+    padding: 20px 30px;
+  }
+  @keyframes muestraMenu {
+    from{opacity:0;}
+    to{opacity:1}
+}
+  header .nav.active{
+     background-color: var(--colorLogo);
+     z-index: 900;
+     position: fixed;
+     animation: muestraMenu 600ms ease-in-out both;
+     top: 0;
+     width: 100%;
+  }
+  nav .icon-menu{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: block;
+  }
+  header nav .menu{
+    display: none;
+    height:100%;
+    width: 100%;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+  }
+
+  nav .menu.active{
+    top: 70px;
+    display: block;
+    background-image: url('../img/fondo.webp');
+    background-size: cover;
+    z-index: 1000;
+    animation: muestraMenu 600ms ease-in-out both;
+  }
+  .lista-nav ul li{
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .container-landing{
+    padding: 0;
+  }
+
+  .lista-nav ul li a{
+    width: 100%;
+    border-radius: 0;
+    padding: 20px ;
+  }
+}
