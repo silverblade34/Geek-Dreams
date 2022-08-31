@@ -95,6 +95,7 @@ nav .icon-menu{
 }
 /*---------------------LANDING--------------------------- */
 header section{
+    height: 100vh;
     display: flex;
     justify-content: center;
     padding: 70px 100px;
@@ -142,7 +143,7 @@ header section{
 }
 main{
     background-image: url('../img/fondo.webp');
-    padding: 50px 100px;
+    padding: 50px 10px;
     overflow: hidden;
 }
 /*------------------BARRA BUSCAR--------------------- */
@@ -160,46 +161,23 @@ main{
 .conteiner-buscar{
     display: flex;
 }
-.conteiner-buscar ul{
-    list-style: none;
-    height: 100%;
-    font-family: var(--primaryFont);
-    color: var(--colorText);
-}
 .conteiner-buscar .btn-categorias{
     height: 50px;
 }
-.conteiner-buscar .btn-categorias div{
+.conteiner-buscar .btn-categorias{
     display: flex;
+    border: none;
     align-items: center;
     font-size: 14px;
+    color: var(--colorText);
+    font-family: var(--primaryFont);
     background-color: var(--tonoRojizo);
     height: 50px;
     border-radius: 3px 0 0 3px;
     padding: 0 20px;
 }
-.btn-categorias i{
-    padding-left: 5px;
-}
-.conteiner-buscar .btn-categorias{
-    display: block;
-}
-.btn-categorias .lista-categorias{
-    height: max-content;
-    font-size: 14px;
-    background-color: #ad3a4783;
-    display: none;
-}
-.lista-categorias.active{
-   display: block;
-}
-.lista-categorias .items-categorias{
-    padding: 10px 0;
-    text-align: center;
-}
-.items-categorias:hover{
-    background-color: #312370;
-}
+
+
 .conteiner-buscar input{
     height: 50px;
     border: none;
@@ -220,7 +198,9 @@ main{
 }
 /*----------------------------------PRODUCTOS-------------------------------------*/
 .productos{
-    padding-top: 80px;
+  padding: 0 50px;
+  padding-top: 80px;
+    
 }
 .productos h1{
     color: var(--colorText);
@@ -230,12 +210,13 @@ main{
     display: grid;
     padding: 80px 0;
     grid-template-columns: 25% 25% 25% 25%;
-    column-gap: 10px;
+    column-gap: 20px;
     row-gap: 20px;
+    justify-content: center;
 }
 
 .card{
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.527);
   }
@@ -258,7 +239,7 @@ main{
     height: 100%;
     width: 100%;
     background-color: #160b44;
-    border-radius: 25px 25px 0 25px;
+    border-radius: 10px 10px 0 25px;
   }
   .overlay::before,
   .overlay::after{
@@ -393,5 +374,36 @@ main{
     width: 100%;
     border-radius: 0;
     padding: 20px ;
+  }
+/*------------------BARRA BUSCAR--------------------- */
+.barra-buscar{
+  width: 100%;
+}
+.conteiner-buscar{
+  display: block;
+}
+.conteiner-buscar .btn-categorias{
+  width: 100%;
+}
+.input-text{
+  min-width: 300px;
+}
+.conteiner-buscar div{
+  display: flex;
+  justify-content: center;
+}
+.input-submit{
+  width: 100%;
+}
+  /*---------------PRODUCTOS--------------------*/
+  .productos{
+    padding: 20px 0;
+  }
+  .container-productos{
+    display: block;
+    padding-top: 30px;
+  }
+  .card{
+    margin-bottom: 20px;
   }
 }

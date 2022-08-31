@@ -1,0 +1,199 @@
+
+/*----------------------------BARRA DE NAVEGACION -------------------------*/
+header{
+    background-color: var(--colorFondo);
+    color: #ffff;
+}
+nav{
+    padding: 10px 100px;
+}
+header .logo img{
+    margin: auto 0;
+    width: 200px;
+}
+section h1{
+    text-align: center;
+    color: var(--colorFondo);
+    font-family: var(--secondaryFont);
+}
+section p{
+    font-size: 18px;
+    color: var(--colorText);
+    font-family: var(--cuartaFuente);
+}
+header nav{
+    display: flex
+}
+nav .lista-nav{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+.lista-nav ul li a{
+    color: #ffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;
+}
+.lista-nav ul li a:hover{
+    background-color: #ad3a47b6;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.item-active{
+    padding: 10px 20px;
+    background-color: #ad3a47b6;
+    border-radius: 5px;
+}
+nav .icon-menu{
+    display: none;
+}
+
+/*--------------------FOOTER-------------------------*/
+footer{
+    background-color: #08002a;
+    padding: 40px 100px;
+    display: flex;
+    color: #ffff;
+    font-family: var(--cuartaFuente);
+    justify-content: space-between;
+}
+footer div{
+    width: 100%;
+}
+footer input[type=text]{
+    height: 40px;
+    padding-left: 20px;
+    border: none;
+    width: 100%;
+    font-family: var(--cuartaFuente);
+    border-radius: 3px 0 0 3px;
+}
+footer form{
+    padding-top: 20px;
+    display: flex;
+}
+footer .enviar{
+    border: none;
+    border-radius: 0 3px 3px 0;
+    height: 40px;
+    padding-left: 10px;
+    color: var(--colorText);
+    padding-right: 10px;
+    cursor: pointer;
+    font-family: var(--cuartaFuente);
+    background-color: var(--colorLogo);
+}
+footer p{
+    padding: 5px 0;
+}
+footer img{
+    width: 250px;
+}
+footer .footer-cont{
+    padding-top: 30px;
+}
+footer .footer-cont div{
+    padding-bottom: 10px;
+}
+.footer-cont .redes div{
+    padding-top: 20px;
+}
+.footer-cont .pago,.redes{
+    padding-left: 50px;
+}
+.footer-cont .pago div{
+    padding-top: 20px;
+}
+footer .footer-cont i{
+    width: 20px;
+    padding-right: 40px;
+}
+@media(max-width:850px){
+    header{
+        width: 100%;
+        overflow: hidden;
+    }
+   main{
+    width: 100%;
+     padding: 30px 20px;
+   }
+   /*----------------------------BARRA DE NAVEGACION -------------------------*/
+   header .logo img{
+    margin: auto 0;
+    width: 150px;
+  }
+  header section{
+    padding: 30px 30px;
+  }
+  header nav{
+    display: block;
+    padding: 20px 30px;
+  }
+  @keyframes muestraMenu {
+    from{opacity:0;}
+    to{opacity:1}
+}
+  header .nav.active{
+     background-color: var(--colorLogo);
+     z-index: 900;
+     position: fixed;
+     animation: muestraMenu 400ms ease-in-out both;
+     top: 0;
+     width: 100%;
+  }
+  nav .icon-menu{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: block;
+  }
+  header nav .menu{
+    display: none;
+    height:100%;
+    width: 100%;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+  }
+
+  nav .menu.active{
+    top: 70px;
+    display: block;
+    background-image: url('../img/fondo.webp');
+    background-size: cover;
+    z-index: 1000;
+    animation: muestraMenu 400ms ease-in-out both;
+  }
+  .lista-nav ul li{
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .container-landing{
+    padding: 0;
+  }
+
+  .lista-nav ul li a{
+    width: 100%;
+    border-radius: 0;
+    padding: 20px ;
+  }
+/*----------------------FOOTER----------------------*/
+    footer{
+        display: block;
+        padding: 30px;
+    }
+}

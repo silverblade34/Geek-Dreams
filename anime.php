@@ -1,7 +1,7 @@
 <?php
-include('include/conexionBD.php');
-$productos = "SELECT * FROM productos WHERE pagina=3";
-?>
+  include('include/conexionBD.php');
+  $productos = "SELECT * FROM productos";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@ $productos = "SELECT * FROM productos WHERE pagina=3";
     <title>GeekDreams|Anime</title>
 
     <link rel="stylesheet" href="css/anime.css">
+    <link rel="stylesheet" href="css/menu_footer.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
@@ -68,22 +69,20 @@ $productos = "SELECT * FROM productos WHERE pagina=3";
             <form action="">
                 <div class="conteiner-buscar">
                     <div>
-                        <ul>
-                            <li class="btn-categorias">
-                                <div>Categorias <i class="fa-solid fa-angle-down"></i></div>
-                                <ul class="lista-categorias">
-                                    <li class="items-categorias">Ropa</li>
-                                    <li class="items-categorias">Accesorios</li>
-                                    <li class="items-categorias">Merchandising</li>
-                                    <li class="items-categorias">Decoración</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <select class="btn-categorias" name="" id="">
+                            <option value="">Categoría</option>
+                            <option value="">Ropa</option>
+                            <option value="">Accesorios</option>
+                            <option value="">Merchandising</option>
+                            <option value="">Decoración</option>
+                        </select>
                     </div>
                     <div>
-                        <input class="input-text" type="text" name="" id="" placeholder="Busca tu producto"><input class="input-submit" type="submit" value="Buscar">
+                        <input class="input-text" type="text" name="" id="" placeholder="Busca tu producto">
                     </div>
-
+                    <div>
+                        <input class="input-submit" type="submit" value="Buscar">
+                    </div>
                 </div>
                 </div>
             </form>
@@ -102,7 +101,7 @@ $productos = "SELECT * FROM productos WHERE pagina=3";
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="<?php echo $row['rutaImagen'] ?>" alt="" class="card-img">
+                                <img src="uploads/<?php echo $row['rutaImagen'] ?>" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -119,7 +118,9 @@ $productos = "SELECT * FROM productos WHERE pagina=3";
             </div>
         </section>
     </main>
-
+    <?php
+    include('include/footer.php')
+    ?>
     <!-- Swiper JS -->
     <script src="js/swiper-bundle.min.js"></script>
 

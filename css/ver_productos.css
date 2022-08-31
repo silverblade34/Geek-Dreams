@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryFont:'Russo One', sans-serif;
+    --secondaryFont:'Slackey', cursive;
+    --tercierioFont:'Rancho', cursive;
+    --cuartaFuente:'Sulphur Point', sans-serif;
+    --colorText:#ffff;
+    --primaryColor:#835ad4a8;
+    --colorLogo:#330065;
+    --colorFondo:#08002a;
+    --tonoRojizo:#ad3a47;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*-----------------------BARRA DE DESPLAZAMIENTO--------------------- */
+body::-webkit-scrollbar {
+    width: 14px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #08002a;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #312370;
+        /* color of the scroll thumb */
+        /*border-radius: 20px;*/
+        /* roundness of the scroll thumb */
+}
+
+/*---------------------------FORMULARIO BUSCAR------------------------*/
+
+.container-buscador{
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+.container-buscador .container{
+    padding: 30px;
+    background-color: #08002ace;
+    border-radius: 10px;
+}
+.container-buscador form .filtros{
+    display: flex;
+}
+
+.container-buscador h5{
+    color: var(--colorText);
+    font-size: 22px;
+    font-family: var(--cuartaFuente);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.container-buscador form input,select{
+    height: 37px;
+    font-family: var(--cuartaFuente);
+    padding: 10px 15px;
+    margin-right: 5px;
+}
+.input-nombre{
+    width: 400px;
+}
+.btn-buscar{
+    display: flex;
+    align-items: flex-end;
+}
+.btn-buscar input{
+    background-color: var(--colorLogo);
+    color:var(--colorText);
+    border: none;
+
+}
+table thead{
+    background-color: var(--tonoRojizo);
+}
+.tabla-pro th,td{
+    font-family: var(--cuartaFuente);
+    color: var(--colorText);
+    width: 200px;
+    padding: 10px 5px;
+    text-align: center;
+    margin: 0;
+}
